@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>لمسة فن</title>
+<style>
+body{font-family:sans-serif;background:#fff0f5;margin:0;padding:0;} 
+header,footer{
+    background:#ffffff;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(255,182,193,0.5);
+    border-bottom:3px solid #d86a93; 
+}
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:20px;
+}
+.card{
+    background:#ffffff;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(216,106,147,0.35);
+    padding:15px;
+    border:3px solid #d86a93; 
+}
+.card img{
+    width:100%;
+    border-radius:12px;
+    border:4px solid #d86a93; 
+}
+.section{
+    padding:40px;
+}
+h2{
+    color:#d86a93;
+    border-right:5px solid #e89ab6;
+    padding-right:10px;
+}
+footer a{display:block;margin:5px 0;}
+.fixed-contact{
+    position:fixed;
+    bottom:10px;
+    left:10px;
+    background:#ffe4ec;
+    padding:10px 15px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(216,106,147,0.4);
+    font-size:14px;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeIn 1s ease-out forwards;
+}
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button animation */
+.button-animate, a.button-animate {
+    transition: 0.3s ease;
+    transform: translateY(0);
+}
+.button-animate:hover {
+    background:#e889ab !important;
+    transform: translateY(-5px);
+    box-shadow:0 10px 25px rgba(216,106,147,0.4);
+}
+
+/* Product card animation */
+.card {
+    transition:0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow:0 10px 28px rgba(216,106,147,0.35);
+}
+
+
+/* Page Intro Overlay */
+#page-intro {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #ffd8e7, #ffe4ef, #fff3f7);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: introFadeOut 1.6s ease forwards;
+}
+#page-intro h1 {
+    color: #d86a93;
+    font-size: 42px;
+    font-weight: 900;
+    opacity: 0;
+    animation: introText 1s ease forwards 0.3s;
+}
+
+@keyframes introText {
+    to { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes introFadeOut {
+    0% { opacity: 1; }
+    55% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+
+/* Stronger global font weight */
+body, p, h1, h2, h3, a, div, span, li {
+    font-weight: 700 !important;
+}
+
+/* Hero title stronger */
+header h1 {
+    font-weight: 900 !important;
+}
+
+/* Buttons bold */
+.button-animate {
+    font-weight: 900 !important;
+}
+
+/* Section titles */
+h2 {
+    font-weight: 900 !important;
+}
+
+/* Reviews + cards */
+.card p, .card h3 {
+    font-weight: 800 !important;
+}
+
+</style>
+</head>
+
+<body>
+<div id="page-intro">
+    <h1>لمسة فن</h1>
+</div>
+
+
+
+
+<header style="
+    background: linear-gradient(135deg, #ffe4ef, #ffd8e7, #fff3f7);
+    padding: 70px 20px;
+    text-align: center;
+    color: #d86a93;
+    border-bottom: 4px solid #d86a93;
+">
+    <div style='max-width:1050px;margin:auto;'>
+        <div style='display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;'>
+
+            <div style='flex:1;min-width:300px;'>
+                <h1 style="
+                    margin:0;
+                    font-size:46px;
+                    color:#d86a93;
+                    font-weight:900;
+                    line-height:1.3;
+                ">
+                    لمسة فن – فن الكونكريت الفاخر
+                </h1>
+                <p style="
+                    margin-top:15px;
+                    font-size:20px;
+                    color:#6a3753;
+                    font-weight:600;
+                    line-height:1.8;
+                ">
+                    نبتكر قطع كونكريت راقية بتصاميم فنية تجمع بين الجمال والحرفية لتزيّن مساحتك بأناقة لا مثيل لها.
+                </p>
+                <a href="#contact" style='
+                    display:inline-block;
+                    margin-top:28px;
+                    padding:16px 40px;
+                    background:#d86a93;
+                    color:white;
+                    font-weight:800;
+                    border-radius:40px;
+                    font-size:20px;
+                    text-decoration:none;
+                    box-shadow:0 8px 22px rgba(216,106,147,0.35);
+                ' class="button-animate">اطلب الآن</a>
+            </div>
+
+            <div style='flex:1;min-width:300px;'>
+                <img src="/mnt/data/products/كونكريتيا/1038710089747_1038712468053.jpg" style="
+                    width:100%;
+                    max-width:430px;
+                    border-radius:22px;
+                    box-shadow:0 12px 30px rgba(216,106,147,0.35);
+                    border:4px solid #d86a93;
+                ">
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+
+<section class="section fade-in" id="about">
+<h2>من نحن</h2>
+<p>نحن شركة لمسة فن، شركة متخصصة في فن الكونكريت، نقدم منتجات يدوية فاخرة مصنوعة بعناية واحترافية.</p>
+</section>
+
+<section class="section fade-in" id="services">
+<h2>خدماتنا</h2>
+<ul>
+<li>صناعة جميع أنواع المباخر</li>
+<li>صناعة جميع أنواع المزهريات بلاسم</li>
+<li>صناعة طقوم ديكورات زينة فاخرة</li>
+<li>تنفيذ تصاميم خاصة حسب الطلب</li>
+</ul>
+</section>
+
+<section class="section fade-in">
+<h2>المنتجات</h2>
+<div class="products">
+<div class="card"><img src="product1.jpg"><h3>منتج 1</h3></div>
+<div class="card"><img src="product2.jpg"><h3>منتج 2</h3></div>
+<div class="card"><img src="product3.jpg"><h3>منتج 3</h3></div>
+<div class="card"><img src="product4.jpg"><h3>منتج 4</h3></div>
+<div class="card"><img src="product5.jpg"><h3>منتج 5</h3></div>
+<div class="card"><img src="product6.jpg"><h3>منتج 6</h3></div>
+<div class="card"><img src="product7.jpg"><h3>منتج 7</h3></div>
+<div class="card"><img src="product8.jpg"><h3>منتج 8</h3></div>
+</div>
+</section>
+
+<section class="section fade-in" id="contact">
+<h2>تواصل معنا</h2>
+<p>واتساب: <a href="https://wa.me/967781226727">+967781226727</a></p>
+<p>البريد الإلكتروني: <a href="mailto:tuochart48@gmail.com">tuochart48@gmail.com</a></p>
+</section>
+
+<div class="fixed-contact">
+<a href="https://wa.me/967781226727">واتساب</a>
+<a href="mailto:tuochart48@gmail.com">البريد الإلكتروني</a>
+</div>
+
+<footer>
+<p>© 2025 لمسة فن</p>
+</footer>
+
+</body>
+</html>
+
+<div class="section fade-in" style="max-width:1000px;margin:auto;margin-top:50px;">
+    <h2 style="color:#d86a93;border-right:5px solid #e89ab6;padding-right:10px;">آراء العملاء</h2>
+
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+        gap:22px;
+        margin-top:25px;
+    ">
+        <div style="background:white;padding:25px;border-radius:18px;box-shadow:0 6px 20px rgba(216,106,147,0.18);border:3px solid #ffa7c4;">
+            <p style="color:#6a3753;font-size:15px;">“جودة رائعة جداً! القطع أجمل من الصور والتعامل راقي.”</p>
+            <p style="text-align:left;color:#d86a93;font-weight:bold;">— سارة</p>
+        </div>
+
+        <div style="background:white;padding:25px;border-radius:18px;box-shadow:0 6px 20px rgba(216,106,147,0.18);border:3px solid #ffa7c4;">
+            <p style="color:#6a3753;font-size:15px;">“ممتاز، التوصيل سريع والمنتجات فاخرة بشكل جميل.”</p>
+            <p style="text-align:left;color:#d86a93;font-weight:bold;">— رويدا</p>
+        </div>
+
+        <div style="background:white;padding:25px;border-radius:18px;box-shadow:0 6px 20px rgba(216,106,147,0.18);border:3px solid #ffa7c4;">
+            <p style="color:#6a3753;font-size:15px;">“تعامل رائع وتصاميم راقية جداً، أنصح فيه.”</p>
+            <p style="text-align:left;color:#d86a93;font-weight:bold;">— أمل</p>
+        </div>
+    </div>
+</div>
